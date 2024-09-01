@@ -4,24 +4,8 @@ import random
 from argon2 import PasswordHasher, exceptions
 
 # Argon2 Password Hasher
-ph = PasswordHasher(
-    time_cost=3,       # t=3
-    memory_cost=65536, # m=65536
-    parallelism=4,     # p=4
-    hash_len=16,       # length of the hash
-    salt_len=16,       # length of the salt
-)
+ph = PasswordHasher()
 
-# Title with UI flare
-st.title("Secure Your Credentials with Argon2")
-
-# Display Argon2 parameters in a separate box
-st.subheader("Argon2 Parameters:")
-st.text_area(
-    "Params",
-    "argon2id\nversion 19\nmemory used 65536\ntime 3",
-    height=165
-)
 st.title("Generate Argon2 hash's")
 
 username = st.text_input("Enter a username")
