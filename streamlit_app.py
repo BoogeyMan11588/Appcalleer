@@ -31,12 +31,12 @@ if st.button("Hash it 🚀"):
             uhash = ph.hash(username)
             phash = ph.hash(password)
 
+            # Obfuscated hash display
             obfuscated_uhash = '*' * len(uhash)
             obfuscated_phash = '*' * len(phash)
 
-            # Display the hashed values
-            st.success("We successfully hashed your credentials!")
-
+            st.success("Successfully hashed the credentials!")
+            
             # Option to reveal the hash
             if st.checkbox("Reveal Hashed Username"):
                 st.write("Hashed Username:", uhash)
