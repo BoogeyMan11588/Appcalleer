@@ -20,7 +20,7 @@ st.subheader("Argon2 Parameters:")
 st.text_area(
     "Cost Parameters",
     "argon2id\nv=19\nm=65536\nt=3\np=4\nm=65536,t=3,p=4",
-    height=150
+    height=155
 )
 st.title("Generate Argon2 hash's")
 
