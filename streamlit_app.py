@@ -39,7 +39,7 @@ def check_version(current_version):
         response.raise_for_status()
         latest_release = response.json()
         latest_version = latest_release['tag_name'].lstrip('v')  
-        return "red" if version_tuple(current_version) < version_tuple(latest_version) else "black"
+        return "red" if version_tuple(current_version) < version_tuple(latest_version) else "green"
     except requests.RequestException:
         return "orange"
 
