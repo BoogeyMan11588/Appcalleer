@@ -13,7 +13,7 @@ username = st.text_input("Enter a username")
 password = st.text_input("Enter a password", type="password")
 
 def neon_loading_bar():
-    st.info("Preparing to hash your credentials...")
+    st.info("Hash your credentials... Please wait")
     progress = st.progress(0)
     wait_time = random.uniform(3, 7)
     for percent_complete in range(100):
