@@ -27,12 +27,6 @@ def update_server_info():
         response = requests.get(url, timeout=5)
         response.raise_for_status()
         info = response.json()
-
-        server_info = (
-            f"Server: {info.get('server', 'Unknown')}\n"
-            f"Gamename: {info['vars'].get('gamename', 'Unknown')}\n"
-            f"Project Name: {info['vars'].get('sv_projectName', 'Unknown')}\n"
-        )
         txadmin_version = info['vars'].get('txAdmin-version', 'Unknown')
         return server_info, txadmin_version
     except (requests.RequestException, KeyError):
@@ -65,7 +59,6 @@ st.markdown(f"**Unrivaled Status**: <span style='color:{'green' if unrivaled_sta
 
 st.header("Server Info")
 server_info, txadmin_version = update_server_info()
-st.text(server_info)
 st.markdown(f"**txAdmin Version**: <span style='color:{check_version(txadmin_version)}'>{txadmin_version}</span>", unsafe_allow_html=True)
 
 st.header("Attendance - RTC")
