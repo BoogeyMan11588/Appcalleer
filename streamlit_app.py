@@ -23,7 +23,7 @@ def neon_loading_bar():
 # Button to trigger hashing
 if st.button("Hash it 🚀"):
     if not username or not password:
-        st.error("Username and password are required. 🙄")
+        st.error("Username and password are required 🙄")
     else:
         neon_loading_bar()  # Show the neon loading bar
 
@@ -33,7 +33,7 @@ if st.button("Hash it 🚀"):
             phash = ph.hash(password)
 
             # Display the hashed values
-            st.success("We successfully hashed the credentials!")
+            st.success("We successfully hashed your credentials!")
             st.write("Hashed Username:", uhash)
             st.write("Hashed Password:", phash)
 
