@@ -6,16 +6,14 @@ from argon2 import PasswordHasher, exceptions
 # Argon2 Password Hasher
 ph = PasswordHasher()
 
-# Title with UI flare
-st.title("🎉 Generate Argon2 hash's 🎉")
 
-# Input fields for username and password
+st.title("Generate Argon2 hash's")
+
 username = st.text_input("Enter a username")
 password = st.text_input("Enter a password", type="password")
 
-# Neon loading bar simulation (fake wait)
 def neon_loading_bar():
-    st.info("🔋 Preparing to hash your credentials...")
+    st.info("Preparing to hash your credentials...")
     progress = st.progress(0)
     wait_time = random.uniform(3, 7)
     for percent_complete in range(100):
@@ -26,7 +24,6 @@ def neon_loading_bar():
 if st.button("Hash it 🚀"):
     if not username or not password:
         st.error("Username and password are required. 🙄")
-        st.markdown("🙄 Please enter both username and password.")
     else:
         neon_loading_bar()  # Show the neon loading bar
 
@@ -40,8 +37,8 @@ if st.button("Hash it 🚀"):
             st.write("Hashed Username:", uhash)
             st.write("Hashed Password:", phash)
 
-            # Fireworks animation after hashing
-            st.balloons()  # This is the built-in Streamlit fireworks effect
+            
+            st.balloons() 
 
         except Exception as e:
             st.error(f"Error during hashing: {e}")
