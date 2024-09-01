@@ -1,6 +1,20 @@
 import streamlit as st
 
-st.title("🎈 My new app")
+# App title
+st.title("App Caller")
+
+# Text input
+name = st.text_input("Enter your name")
+
+# Button
+if st.button("Submit"):
+    st.write(f"Hello, {name}!")
+
+# Additional content
 st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+    ""
+)
+
+st.write(
+    ""
 )
