@@ -18,9 +18,9 @@ st.title("Secure Your Credentials with Argon2")
 # Display Argon2 parameters in a separate box
 st.subheader("Argon2 Parameters:")
 st.text_area(
-    "Cost Parameters",
-    "argon2id\nv=19\nm=65536\nt=3\np=4\nm=65536,t=3,p=4",
-    height=155
+    "Params",
+    "argon2id\nv=19\nm=65536\nt=3\np=4\nm=65536\nt=3\np=4",
+    height=165
 )
 st.title("Generate Argon2 hash's")
 
