@@ -36,6 +36,17 @@ if st.button("Hash it 🚀"):
             st.write("Hashed Username:", uhash)
             st.write("Hashed Password:", phash)
 
+                        # Option to reveal the hash
+            if st.checkbox("Reveal Hashed Username"):
+                st.write("Hashed Username:", uhash)
+            else:
+                st.write("Hashed Username:", obfuscated_uhash)
+            
+            if st.checkbox("Reveal Hashed Password"):
+                st.write("Hashed Password:", phash)
+            else:
+                st.write("Hashed Password:", obfuscated_phash)
+
             
             st.balloons() 
 
