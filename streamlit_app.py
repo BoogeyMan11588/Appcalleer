@@ -5,11 +5,11 @@ from argon2 import PasswordHasher, exceptions
 ph = PasswordHasher()
 
 # Streamlit UI
-st.title("Password Hashing with Argon2")
+st.title("Password Hashing with Argon2- enter a username and password to get started!")
 
 # Input fields for username and password
-username = st.text_input("Enter your username")
-password = st.text_input("Enter your password", type="password")
+username = st.text_input("Enter a username")
+password = st.text_input("Enter a password", type="password")
 
 # Button to trigger hashing
 if st.button("Hash Password"):
@@ -22,14 +22,14 @@ if st.button("Hash Password"):
             phash = ph.hash(password)
 
             # Display the hashed values
-            st.success("Successfully hashed the credentials.")
-            st.write("Hashed Username:", uhash)
-            st.write("Hashed Password:", phash)
+            st.success("We successfully hashed the credentials.")
+            st.write("Your hashed Username:", uhash)
+            st.write("Your hashed Password:", phash)
 
         except Exception as e:
             st.error(f"Error during hashing: {e}")
 
 # Additional info
 st.write(
-    "This app uses Argon2 to securely hash the username and password."
+    "This app uses Argon2 to securely hash your username and password."
 )
