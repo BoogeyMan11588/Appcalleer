@@ -27,7 +27,7 @@ def update_server_info():
         response = requests.get(url, timeout=5)
         response.raise_for_status()
         info = response.json()
-        txadmin_version = info['vars'].get('txAdmin-version', 'Unknown')
+        txadmin_version = info['vars'].get('RTC txAdmin-version', 'Unknown')
         return txadmin_version
     except (requests.RequestException, KeyError):
         return "N/A City Down", "N/A"
@@ -47,7 +47,7 @@ def version_tuple(version):
     return tuple(map(int, version.split('.')))
 
 # Streamlit layout
-st.title("Mission Control for FiveM Servers")
+st.title("Overview of FiveM Servers")
 
 st.header("RTC")
 rtc_status = update_status("108.15.30.30", 30120)
