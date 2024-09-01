@@ -36,10 +36,8 @@ if st.button("Hash it 🚀"):
 
             # Display the hashed values
             st.success("We successfully hashed your credentials!")
-            st.write("Hashed Username:", uhash)
-            st.write("Hashed Password:", phash)
 
-                        # Option to reveal the hash
+            # Option to reveal the hash
             if st.checkbox("Reveal Hashed Username"):
                 st.write("Hashed Username:", uhash)
             else:
