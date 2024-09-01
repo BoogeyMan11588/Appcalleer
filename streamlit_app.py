@@ -58,7 +58,7 @@ unrivaled_status = update_status("108.15.30.30", 30121)
 st.markdown(f"**Unrivaled Status**: <span style='color:{'green' if unrivaled_status == 'Heartbeat' else 'red'}'>{unrivaled_status}</span>", unsafe_allow_html=True)
 
 st.header("Server Info")
-server_info, txadmin_version = update_server_info()
+txadmin_version = update_server_info()
 st.markdown(f"**txAdmin Version**: <span style='color:{check_version(txadmin_version)}'>{txadmin_version}</span>", unsafe_allow_html=True)
 
 st.header("Attendance - RTC")
