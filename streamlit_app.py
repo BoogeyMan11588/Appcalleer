@@ -28,7 +28,7 @@ def update_server_info():
         response.raise_for_status()
         info = response.json()
         txadmin_version = info['vars'].get('txAdmin-version', 'Unknown')
-        return server_info, txadmin_version
+        return txadmin_version
     except (requests.RequestException, KeyError):
         return "N/A City Down", "N/A"
 
