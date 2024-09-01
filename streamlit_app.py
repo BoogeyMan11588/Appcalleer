@@ -27,7 +27,7 @@ def update_server_info():
         response = requests.get(url, timeout=5)
         response.raise_for_status()
         info = response.json()
-        txadmin_version = info['vars'].get('RTC txAdmin-version', 'Unknown')
+        txadmin_version = info['vars'].get('txAdmin-version', 'Unknown')
         return txadmin_version
     except (requests.RequestException, KeyError):
         return "N/A City Down", "N/A"
@@ -59,7 +59,7 @@ st.markdown(f"**Unrivaled Status**: <span style='color:{'green' if unrivaled_sta
 
 st.header("Server Info")
 txadmin_version = update_server_info()
-st.markdown(f"**txAdmin Version**: <span style='color:{check_version(txadmin_version)}'>{txadmin_version}</span>", unsafe_allow_html=True)
+st.markdown(f"**RTC txAdmin Version**: <span style='color:{check_version(txadmin_version)}'>{txadmin_version}</span>", unsafe_allow_html=True)
 
 st.header("Attendance - RTC")
 rtc_players_info = update_players_info("http://108.15.30.30:30120/players.json")
