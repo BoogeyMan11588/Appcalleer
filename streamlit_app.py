@@ -22,7 +22,7 @@ def update_players_info(url):
         return "N/A City Down"
 
 def update_server_info():
-    url = "http://108.15.30.30:30120/info.json"
+    url = "http://98.117.222.7:30120/info.json"
     try:
         response = requests.get(url, timeout=5)
         response.raise_for_status()
